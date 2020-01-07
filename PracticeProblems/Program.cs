@@ -6,11 +6,13 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello!");
-
             string name = "Adam";
             string reverse = ReverseString.Reverse(name);
-            Console.WriteLine(reverse);
+            Console.WriteLine("Original String: " + name);
+            Console.WriteLine("Reversed String: " + reverse);
+            Console.WriteLine();
+
+            FizzBuzz fizzBuzz = new FizzBuzz();
         }
     }
 }
