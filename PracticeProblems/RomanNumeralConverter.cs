@@ -33,6 +33,99 @@ namespace PracticeProblems
             return sum;
         }
 
+        public static string ConvertToNumeral(int number)
+        {
+            int sum = number;
+            string romanNumeral = "";
+            while (sum != 0)
+            {
+                if (sum >= 1000)
+                {
+                    sum -= 1000;
+                    romanNumeral += "M";
+                }
+                else if (sum >= 500 && sum < 1000)
+                {
+                    if(sum >= 900)
+                    {
+                        sum -= 900;
+                        romanNumeral += "CM";
+                    }
+                    else
+                    {
+                        sum -= 500;
+                        romanNumeral += "D";
+                    }
+                }
+                else if (sum >= 100 && sum < 500)
+                {
+                    if (sum >= 400)
+                    {
+                        sum -= 400;
+                        romanNumeral += "CD";
+                    }
+                    else
+                    {
+                        sum -= 100;
+                        romanNumeral += "C";
+                    }
+                }
+                else if (sum >= 50 && sum < 100)
+                {
+                    if (sum >= 90)
+                    {
+                        sum -= 90;
+                        romanNumeral += "XC";
+                    }
+                    else
+                    {
+                        sum -= 50;
+                        romanNumeral += "L";
+                    }
+                }
+                else if (sum >= 10 && sum < 50)
+                {
+                    if (sum >= 40)
+                    {
+                        sum -= 40;
+                        romanNumeral += "XL";
+                    }
+                    else
+                    {
+                        sum -= 10;
+                        romanNumeral += "X";
+                    }
+                }
+                else if(sum >= 5 && sum < 10)
+                {
+                    if (sum == 9)
+                    {
+                        sum -= 9;
+                        romanNumeral += "IX";
+                    }
+                    else
+                    {
+                        sum -= 5;
+                        romanNumeral += "V";
+                    }
+                }
+                else if(sum >= 1 && sum < 5)
+                {
+                    if (sum == 4)
+                    {
+                        sum -= 4;
+                        romanNumeral += "IV";
+                    }
+                    else
+                    {
+                        sum -= 1;
+                        romanNumeral += "I";
+                    }
+                }
+            }
+            return romanNumeral;
+        }
+
         public static int GetValue(char value)
         {
             if(value == 'I')

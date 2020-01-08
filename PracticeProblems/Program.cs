@@ -12,8 +12,11 @@ namespace PracticeProblems
             Console.WriteLine("Reversed String: " + reverse);
             Console.WriteLine();
 
-            string numeral = "XIX";
+            string numeral = "LXVII";
             Console.WriteLine(RomanNumeralConverter.ConvertToInt(numeral));
+
+            int number = 12;
+            Console.WriteLine(RomanNumeralConverter.ConvertToNumeral(number));
         }
     }
 }
