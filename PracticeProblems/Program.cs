@@ -12,7 +12,8 @@ namespace PracticeProblems
             Console.WriteLine("Reversed String: " + reverse);
             Console.WriteLine();
 
-            FizzBuzz fizzBuzz = new FizzBuzz();
+            string numeral = "XIX";
+            Console.WriteLine(RomanNumeralConverter.ConvertToInt(numeral));
         }
     }
 }
